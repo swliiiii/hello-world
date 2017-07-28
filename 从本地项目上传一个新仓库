@@ -1,0 +1,22 @@
+本文参考 http://blog.csdn.net/hanhailong726188/article/details/46738929，并根据实际使用中遇到的问题，稍加修改
+第一步 创建git仓库
+  选中你本地的项目文件夹，右键菜单 “git bash here”， 在git bash中执行命令（以下命令行不特殊说明，均是在git bash中输入）：
+  git init
+第二步 将项目的所有文件添加到仓库中
+  git add .
+  如果想添加某个特定的文件，只需要把.换成特定的文件名即可
+第三步 将添加的文件commit到仓库
+  git commit -m "注释语句"
+第四步 使用浏览器到github上创建自己的一个新仓库，比如network。得到仓库的地址https://github.com/swliiiii/network
+第五步 将本地仓库关联到github上
+  git remote add origin https://github.com/swliiiii/network
+你需要将https链接地址换成你自己的仓库url地址。
+第六步 上传github之前，先要pull一下
+  git pull origin master --allow-unrelated-histories 
+  如果没有--allow-unrelated-histories，可能会报错 fatal: refusing to merge unrelated histories
+  回车后可能要稍微等下
+第七步 上传代码到github远程仓库
+   git push -u origin master
+   这个过程时间会长一些，会提示上传进度。
+   
+最后，你就可以通过浏览器在github上看到上传的文件了。
